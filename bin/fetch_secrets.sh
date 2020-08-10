@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Premise intalled below commands:
+1. gcloud(https://cloud.google.com/sdk/install?hl=en)
+2. jq(https://github.com/stedolan/jq)
+
 # Get secrets list
 secrets=$(gcloud secrets list --format=json | jq -r '.[].name')
 
